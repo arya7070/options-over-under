@@ -5,7 +5,8 @@ import numpy as np
 import datetime
 import matplotlib.pyplot as plt
 from scipy.stats import norm
-from apikeys import tradier as API_TOKEN
+
+API_TOKEN=st.secrets["key"]
 
 # Constants
 BASE_URL_HISTORY = "https://api.tradier.com/v1/markets/history"
