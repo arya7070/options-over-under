@@ -166,7 +166,7 @@ def main():
             bs_iv_stock = newton_raphson_iv(selected_call['ask'], stock_price, selected_strike, T_stock, r)
             mid_iv_stock = newton_raphson_iv(selected_call['mid'], stock_price, selected_strike, T_stock, r)
             st.write(f"**Black-Scholes IV:** {bs_iv_stock:.2f}%")
-            st.write(f"**Midpoint IV:** {mid_iv_stock:.2f}%")
+            st.write(f"**Black-Scholes Midpoint IV:** {mid_iv_stock:.2f}%")
 
     # INDEX ANALYSIS
     st.markdown(f"<h2 style='text-align: center;'>{index} Analysis</h2>", unsafe_allow_html=True)
@@ -198,19 +198,19 @@ def main():
     if avg_hv_stock and not np.isnan(ask_iv_stock):
         diff_stock = ask_iv_stock - avg_hv_stock
         if diff_stock > 2:
-            st.write(f"📌 **Stock Valuation:** Overvalued by {diff_stock:.2f} points.")
+            st.write(f"📌 **Stock Option Valuation:** Overvalued by {diff_stock:.2f} points.")
         elif diff_stock < -2:
-            st.write(f"📌 **Stock Valuation:** Undervalued by {abs(diff_stock):.2f} points.")
+            st.write(f"📌 **Stock Option Valuation:** Undervalued by {abs(diff_stock):.2f} points.")
         else:
             st.write("📌 **Stock Valuation:** Fairly valued.")
     if avg_hv_index and not np.isnan(ask_iv_index):
         diff_index = ask_iv_index - avg_hv_index
         if diff_index > 2:
-            st.write(f"📌 **Index Valuation:** Overvalued by {diff_index:.2f} points.")
+            st.write(f"📌 **Index Option Valuation:** Overvalued by {diff_index:.2f} points.")
         elif diff_index < -2:
-            st.write(f"📌 **Index Valuation:** Undervalued by {abs(diff_index):.2f} points.")
+            st.write(f"📌 **Index Option Valuation:** Undervalued by {abs(diff_index):.2f} points.")
         else:
-            st.write("📌 **Index Valuation:** Fairly valued.")
+            st.write("📌 **Index Option Valuation:** Fairly valued.")
 
     # HISTOGRAM
     st.markdown("<h2 style='text-align: center;'>Daily Returns Histogram</h2>", unsafe_allow_html=True)
