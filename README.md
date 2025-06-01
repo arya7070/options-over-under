@@ -1,5 +1,5 @@
 📊 Options IV Analyzer & Volatility Comparison
-This app leverages the Tradier API to analyze options volatility for any stock or index ETF (e.g., SPY, QQQ, XLK). It helps traders and analysts make more informed decisions by comparing implied volatility (IV) with historical volatility (HV).
+This app leverages the brokrage API to analyze options volatility for any stock or index ETF (e.g., SPY, QQQ, XLK). It helps traders and analysts make more informed decisions by comparing implied volatility (IV) with historical volatility (HV).
 
 Features:
 🔍 Stock & Index Selection: Choose a stock ticker and compare it to an index (SPY, QQQ, XLK, etc.).
@@ -21,7 +21,7 @@ Built With:
 
 📈 Matplotlib
 
-🔌 Tradier API
+🔌 brokrage API
 
 Getting Started:
 Clone the repo, install dependencies, and run the app using:
