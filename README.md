@@ -23,14 +23,3 @@ Built With:
 
 🔌 brokrage API
 
-Getting Started:
-Clone the repo, install dependencies, and run the app using:
-
-bash
-Copy
-Edit
-streamlit run app.py
-Requirements:
-A valid Tradier API token
-
-Python 3.x
