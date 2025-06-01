@@ -191,7 +191,7 @@ def main():
             bs_iv_index = newton_raphson_iv(selected_call_idx['ask'], index_price, selected_strike_idx, T_index, r)
             mid_iv_index = newton_raphson_iv(selected_call_idx['mid'], index_price, selected_strike_idx, T_index, r)
             st.write(f"**Black-Scholes IV:** {bs_iv_index:.2f}%")
-            st.write(f"**Midpoint IV:** {mid_iv_index:.2f}%")
+            st.write(f"**Black-Scholes Midpoint IV:** {mid_iv_index:.2f}%")
 
     # COMPARISON SUMMARY
     st.markdown("<h2 style='text-align: center;'>Comparison Summary</h2>", unsafe_allow_html=True)
