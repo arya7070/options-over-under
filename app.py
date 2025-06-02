@@ -179,7 +179,7 @@ def main():
 
     index_expirations = fetch_expirations(index)
     if index_expirations:
-        selected_exp_index = st.selectbox("Select Index Expiration:", index_expirations)
+        selected_exp_index = st.selectbox("Select Index Expiration:", index_expirations,index=5)
         calls_df_idx, atm_strike_idx = fetch_option_chain(index, selected_exp_index, index_price)
         if not calls_df_idx.empty:
             selected_strike_idx = st.selectbox("Select Index Strike:", sorted(calls_df_idx['strike'].unique()), index=sorted(calls_df_idx['strike'].unique()).index(atm_strike_idx))
